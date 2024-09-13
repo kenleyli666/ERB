@@ -1,0 +1,42 @@
+C:\Users\L04/.ssh/id_ed25519
+
+git clone git@github.com:EthanHung/erb-tutorial
+
+git fetch
+git push
+git pull
+
+git config --global user.name "John Doe"
+git config --global user.email "johndoe@example.com"
+
+
+new branch
+git add .
+git 
+
+# init the git
+git init
+
+# add the file into git
+git add
+git add example.txt
+
+# pull =  git fetch + merge
+git pull
+
+#not too often
+git fetch
+
+git branch
+
+git check out 
+git check out -b
+
+git merge
+
+1.check your location( which branch)
+2.git pull
+3.git add ./git add your-new-file.html
+4.git commit
+5.git push
+

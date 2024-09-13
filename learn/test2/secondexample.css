@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(132, 128, 128);
+    color: #fff;
+}
+header nav ul{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    padding: 20px;
+    list-style: none;
+    border: 1px solid rgb(168, 168, 162);
+    margin: 5px 0;
+    padding: 10px 30px;
+    gap: 10px;
+}
+
+header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+}
+header nav ul li a:hover{
+    color: aquamarine;
+}
+#home{
+    display: flex;
+    justify-content: center;
+}
