@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     padding: 0;
     margin: 0;
@@ -29,4 +30,37 @@ section div input[type="seach"]{
 section div i{
     position: absolute;
     background-color: blue;
+=======
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    text-align: center;
+}
+
+.container nav ul{
+    text-align: right;
+    
+}
+.container nav ul li{
+    display: inline-block;
+    margin: 10px 15px 30px 3px;
+    font-size: .9em;
+}
+.container nav ul li a{
+    text-decoration: none;
+}
+section div input[type="seach"]{
+    width: 70%;
+    height: 6vh;
+    border-radius: 30px;
+    padding-left: 40px;
+    position: relative;
+}
+section div i{
+    position: absolute;
+    background-color: blue;
+>>>>>>> refs/remotes/origin/main
 }

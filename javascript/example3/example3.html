@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,4 +72,79 @@
        });
    </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM 操作示例</title>
+   <style>
+       #dynamicElement {
+           padding: 10px;
+           margin: 10px 0;
+           background-color: lightblue;
+           border: 1px solid blue;
+       }
+       .highlight {
+           color: red;
+           font-weight: bold;
+       }
+   </style>
+</head>
+<body>
+   <h1>DOM 操作示例</h1>
+   <!-- 用於展示修改內容的元素 -->
+   <p id="textElement">這是一段可以被動態修改的文本。</p>
+   <button onclick="modifyText()">點擊修改文本</button>
+   <!-- 用於展示新增和刪除元素的區域 -->
+   <div id="container">
+       <p>這是原本的內容。</p>
+   </div>
+   <button onclick="addElement()">新增元素</button>
+   <button onclick="removeElement()">刪除元素</button>
+   <!-- 用於展示事件處理的按鈕 -->
+   <button id="eventButton">點擊我觸發事件</button>
+   <!-- 用於展示修改樣式的元素 -->
+   <p id="styleElement">這段文字將被改變樣式。</p>
+   <button onclick="changeStyle()">點擊改變樣式</button>
+   <script>
+       // 修改內容的函數
+       function modifyText() {
+           const textElement = document.getElementById('textElement');
+           textElement.textContent = '文本內容已被修改！';
+       }
+       // 新增元素的函數
+       function addElement() {
+           const newElement = document.createElement('p');
+           newElement.id = 'dynamicElement';
+           newElement.textContent = '這是一個動態新增的元素。';
+           document.getElementById('container').appendChild(newElement);
+       }
+       // 刪除元素的函數
+       function removeElement() {
+           const elementToRemove = document.getElementById('dynamicElement');
+           if (elementToRemove) {
+               elementToRemove.parentNode.removeChild(elementToRemove);
+           } else {
+               alert('沒有可刪除的元素！');
+           }
+       }
+       // 修改樣式的函數
+       function changeStyle() {
+           const styleElement = document.getElementById('styleElement');
+           styleElement.style.fontSize = '50px';
+           styleElement.style.display = 'block';
+           styleElement.classList.add('highlight');
+       }
+
+
+       // 事件處理的示例
+       const eventButton = document.getElementById('eventButton');
+       eventButton.addEventListener('click', function() {
+           alert('按鈕已被點擊！');
+       });
+   </script>
+</body>
+>>>>>>> refs/remotes/origin/main
 </html>

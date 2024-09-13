@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,4 +99,106 @@
         }
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll to Next Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Prevent scrolling with the scrollbar */
+        body, html {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="h-screen flex items-center justify-center bg-blue-500 text-white" id="section1">Section 1</div>
+    <div class="h-screen flex items-center justify-center bg-green-500 text-white" id="section2">Section 2</div>
+    <div class="h-screen flex items-center justify-center bg-red-500 text-white" id="section3">Section 3</div>
+    <div class="h-screen flex items-center justify-center bg-purple-500 text-white" id="section4">Section 4</div>
+
+    <script>
+        let isDragging = false;
+        let startY = 0;
+
+        document.addEventListener('wheel', (event) => {
+            // Prevent default scrolling
+            event.preventDefault();
+            if (event.deltaY > 0) {
+                // Scroll down
+                scrollToNextSection();
+            } else {
+                // Scroll up
+                scrollToPreviousSection();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowDown') {
+                scrollToNextSection();
+            } else if (event.key === 'ArrowUp') {
+                scrollToPreviousSection();
+            }
+        });
+
+        // Mouse drag functionality
+        document.addEventListener('mousedown', (event) => {
+            if (event.button === 0) { // left mouse button
+                isDragging = true;
+                startY = event.clientY;
+                event.preventDefault(); // Prevent default action
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        document.addEventListener('mousemove', (event) => {
+            if (isDragging) {
+                const deltaY = startY - event.clientY;
+                if (deltaY > 100) {
+                    scrollToNextSection();
+                    startY = event.clientY; // Reset start position
+                } else if (deltaY < -100) {
+                    scrollToPreviousSection();
+                    startY = event.clientY; // Reset start position
+                }
+            }
+        });
+
+        function scrollToNextSection() {
+            const currentSection = getCurrentSection();
+            const nextSection = currentSection.nextElementSibling;
+            
+            if (nextSection) {
+                nextSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function scrollToPreviousSection() {
+            const currentSection = getCurrentSection();
+            const previousSection = currentSection.previousElementSibling;
+            
+            if (previousSection) {
+                previousSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function getCurrentSection() {
+            const sections = document.querySelectorAll('div[id^="section"]');
+            for (const section of sections) {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 0 && rect.bottom > 0) {
+                    return section;
+                }
+            }
+            return sections[0]; // Default to the first section
+        }
+    </script>
+</body>
+>>>>>>> refs/remotes/origin/main
 </html>

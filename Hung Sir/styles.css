@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
     /* width: 100%;
     height: 100%; */
@@ -129,4 +130,137 @@ img {
   @media (max-width: 900px) {
   }
   @media (max-width: 1200px) {
+=======
+html {
+    /* width: 100%;
+    height: 100%; */
+}
+
+body {
+    /* width: 100%;
+    height: 100%; */
+    text-align: center;
+    /* background-image: url('https://i.pinimg.com/736x/25/98/2c/25982c2af2cca84c831a37dedfd15c66.jpg'); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+img {
+    width: 250px;
+    height: 100%;
+    border-radius: 0 15px 0 15px;
+}
+
+.row {
+    margin-top: 16px;
+}
+
+.login-btn-container {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.container {
+    text-align: left;
+    width: 280px;
+    margin: auto;
+}
+
+.login-label {
+    width: 80px;
+    display: inline-block;
+    border-left-style: solid;
+    padding-left: 5px;
+    background-color: red;
+    /* border-bottom-style: inset;
+    border-left-style: solid;
+    border-right-style: dotted;
+    border-top-style: dashed;
+    border-bottom-width: 5px; */
+}
+
+.login-input {
+    width: 40%;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+.flex {
+    display: flex;
+    height: 300px;
+    padding: 15px;
+    background-color: #61a0f8;
+    /* 修改以下值試試看 row | row-reverse | column | column-reverse; */
+    flex-direction: column;
+  }
+  
+  .item {
+    flex: 1;
+    background-color: #f08bc3;
+    margin: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+  }
+  
+  .flex-2 {
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    background-color: #f08bc3;
+  }
+  
+  @media (max-width: 800px) {
+    .flex {
+        flex-direction: column-reverse;
+    }
+  }
+  
+  @media print and (max-width: 800px) {
+    .flex {
+        background-color: green;
+    }
+  }
+
+
+
+  
+  
+  @media (min-width: 576px) and (max-width: 768px) {
+    /*
+    Medium
+    */
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    /*
+    Medium
+    */
+  }
+
+  @media (min-width: 600px) and (max-width: 992px) {
+  }
+  /*
+  ...
+  */
+  @media (max-width: 600px) {
+  }
+  @media (max-width: 700px) {
+  }
+  @media (max-width: 900px) {
+  }
+  @media (max-width: 1200px) {
+>>>>>>> refs/remotes/origin/main
   }

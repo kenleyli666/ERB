@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 p
 h1-h6
 span
@@ -34,4 +35,42 @@ css
     background
     border
     margin
+=======
+p
+h1-h6
+span
+br
+a
+div
+section
+article
+ul/ol, li
+strong
+em
+img
+header*
+footer*
+
+form (GET/POST)
+    label
+    input
+        text
+        radio
+        checkbox
+        password
+    button
+    select
+        option
+
+
+css
+    color
+    font-weight
+    font-family
+    font-size
+    display
+    background
+    border
+    margin
+>>>>>>> refs/remotes/origin/main
     padding

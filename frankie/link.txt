@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 https://docs.google.com/document/d/1dNHovOz5JR4q4IOeI0iKCG59lIE-QGHH5fzEd_fDOMU/edit?usp=drivesdk
 
 https://docs.emmet.io/cheat-sheet/
@@ -8,4 +9,16 @@ placehold.co
 
 codepen.io/pen
 
+=======
+https://docs.google.com/document/d/1dNHovOz5JR4q4IOeI0iKCG59lIE-QGHH5fzEd_fDOMU/edit?usp=drivesdk
+
+https://docs.emmet.io/cheat-sheet/
+
+https://validator.w3.org/
+
+placehold.co
+
+codepen.io/pen
+
+>>>>>>> refs/remotes/origin/main
 https://docs.google.com/document/d/1ILJSXFd7yTggQO6CJUMI7ECnmcB5pc6N5pnKJvC0Mhw/edit?usp=sharing

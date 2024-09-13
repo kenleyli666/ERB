@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,4 +87,94 @@
     </form>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member registeration form</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
+    <style>
+        .w-25 {
+            width: 35% !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">
+            <img src="https://placehold.co/600x400/000000/FFF?text=Company+logo" alt="company logo" width="50"
+                height="50" />
+        </a>
+    </header>
+    <h1 class="bg-primary text-white w-25">Member registration form</h1>
+    <form action="./test/hello/hello.html" method="GET">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+        </div>
+
+        <div>
+            <label for="first_name">First name:</label>
+            <input type="text" id="first_name" name="first_name">
+        </div>
+
+        <div>
+            <label for="last_name">Last name:</label>
+            <input type="text" id="last_name" name="last_name">
+        </div>
+
+        <div>
+            <label for="age-range">Age range:</label>
+            <select name="age" id="age-range">
+                <option value="teenage">18-29</option>
+                <option value="middle age">30-39</option>
+                <option value="elder">40-49</option>
+                <option value="very elder">50- over 50</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone" name="phone">
+        </div>
+
+        <div>
+            <span>Gender:</span>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="unkwon" name="gender" value="unknow">
+            <label for="unkwon">Unkwon</label>
+        </div>
+
+        <div>
+            <span>Industry:</span>
+            <input type="checkbox" id="it" name="industry">
+            <label for="it">IT</label>
+            <input type="checkbox" id="finance" name="industry">
+            <label for="finance">Finance</label>
+            <input type="checkbox" id="hr" name="industry">
+            <label for="hr">HR</label>
+        </div>
+
+        <div>
+            <label for="remark">Remark</label>
+            <textarea name="remark" id="remark" cols="20" rows="5"></textarea>
+        </div>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+
+>>>>>>> refs/remotes/origin/main
 </html>

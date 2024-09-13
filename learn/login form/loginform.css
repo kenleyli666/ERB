@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     box-sizing: border-box;
     margin: 0;
@@ -74,4 +75,82 @@ label{
 .login-input{
     width: 40px;
     display: inline-block;
+=======
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    background-image: url(./jpg/pexels-adria-masi-461420600-27372389.jpg);
+    background-position: center;
+
+}
+.header{
+    margin-bottom: 40px;
+}
+.row{
+    margin-top: 16px;
+}
+img{
+    width: 250px;
+    height: 100%;
+    border-radius: 0 15px 0 15px;
+}
+form{
+    background: rgb(102, 98, 98);
+    /* border: 1px solid red; */
+    background: inherit;
+}
+.container{
+    text-align: left;
+    width: 280px;
+    margin: 0 auto;
+    background-color: bisque;
+   /*  border: 1px solid red; */
+}
+.btn-container{
+    text-align: left;
+    /* width: 100%; */
+    border-radius: 8px;
+}
+.btn-container button:last-child{
+    margin-left: 100px;
+}
+form div button{
+    background-color: blue;
+    color: #fff;
+    font-size: larger;
+    border-radius: 6px;
+}
+input{
+    height: 35px;
+    padding-left: 15px;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    transition: .3s ease-in-out;
+}
+input:focus{
+    color: blue;
+    margin-top: 15px;
+}
+label{
+    transition: .3s;
+    font-size: larger;
+}
+
+.login-label:hover{
+    transform: translateY(-10px);
+}
+.login-label{
+    width: 80px;
+    /* display: inline-block; */
+}
+.login-input{
+    width: 40px;
+    display: inline-block;
+>>>>>>> refs/remotes/origin/main
 }
