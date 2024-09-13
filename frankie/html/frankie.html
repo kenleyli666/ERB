@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>我的第一個網頁</title>
+   <!-- tailwind css 3.14.10 -->
+
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+   <a href="#">
+      <img src="giphy.gif" width="50" height="50">
+
+   </a>
+</head>
+
+<body>
+
+
+
+   <script>
+      function addTailWind(className, newClass) {
+         const arrList = newClass.split(" ");
+         const containers = document.getElementsByClassName(className);
+         for (let i = 0; i < containers.length; i++) {
+            for (let index = 0; index < arrList.length; index++) {
+               const element = arrList[index];
+               containers[i].classList.add(element);
+            }
+            // Add the new class
+         }
+      }
+
+      addTailWind('Cform1', 'h-[40px] col-span-1 border-4 border-blue-300 w-[300px]');
+
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="absolute top-0 left-[50px] w-[calc(100%-50px)] h-[50px] bg-gray-600"> </div>
+
+
+
+
+   <div id="login" class="absolute top-3 left-[calc(100%-50px)] h-[50px] text-white">登入 </div>
+   <div class="absolute top-3 left-[calc(100%-150px)] h-[50px] text-white">register </div>
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <!-- max-w-fit mx-auto  -->
+   <!-- col-span-1 -->
+
+
+   <div class="text-center">
+
+      <span class="inline-flex flex-col border-2"">
+         <label class=" h-[40px]">UserName:</label>
+         <div class="text-left"><button>12313</button></div>
+      </span>
+   </div>
+
+   <div class="flex flex-col justify-between items-center p-4 bg-gray-200">
+      <div class="flex-none w-1/3 p-2 bg-blue-500 text-white">项目 1</div>
+      <div class="flex-none w-1/3 p-2 bg-green-500 text-white">项目 2</div>
+      <div class="flex-none w-1/3 p-2 bg-red-500 text-white">项目 3</div>
+  </div>
+
+
+   <form action="">
+      <div class="text-center border-blue-300 border-4">
+         <input class="Cform1" type="text" name="" id="">
+         <div><input class="Cform1" type="text" name="" id=""></div>
+         <div class="text-center">
+         </div>
+   </form>
+
+
+   <script>addTailWind('Cform1', 'h-[40px] col-span-1 border-4 border-blue-300 w-[300px]');</script>
+
+
+   <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50"></div>
+
+   <div id="loginForm"
+      class="hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-900 bg-opacity-90 text-white p-6 rounded-lg shadow-lg z-50">
+      <h2 class="text-lg mb-4 text-center">Login</h2>
+      <form>
+         <div class="mb-4">
+            <label for="username" class="block mb-1">Username:</label>
+            <input type="text" id="username"
+               class="w-full px-3 py-2 border border-gray-600 rounded focus:outline-none focus:ring focus:ring-blue-300"
+               required>
+         </div>
+         <div class="mb-4">
+            <label for="password" class="block mb-1">Password:</label>
+            <input type="password" id="password"
+               class="w-full px-3 py-2 border border-gray-600 rounded focus:outline-none focus:ring focus:ring-blue-300"
+               required>
+         </div>
+         <div class="flex justify-between items-center">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+               Submit
+            </button>
+            <button type="button" id="closeForm" class="text-red-500 hover:text-red-700">Cancel</button>
+         </div>
+      </form>
+   </div>
+
+   <script>
+      // Get the elements
+      const loginButton = document.getElementById('login');
+      const loginForm = document.getElementById('loginForm');
+      const closeFormButton = document.getElementById('closeForm');
+      const overlay = document.getElementById('overlay');
+
+      // Function to toggle the login form and overlay
+      function toggleLoginForm() {
+         if (loginForm.classList.contains('hidden')) {
+            loginForm.classList.remove('hidden'); // Show the form
+            overlay.classList.remove('hidden');    // Show the overlay
+            document.body.style.overflow = 'hidden'; // Disable scrolling
+         } else {
+            loginForm.classList.add('hidden');      // Hide the form
+            overlay.classList.add('hidden');         // Hide the overlay
+            document.body.style.overflow = '';       // Enable scrolling
+         }
+      }
+
+      // Event listeners
+      loginButton.addEventListener('click', toggleLoginForm);
+      closeFormButton.addEventListener('click', () => {
+         loginForm.classList.add('hidden'); // Hide the form when canceling
+         overlay.classList.add('hidden');    // Hide the overlay
+         document.body.style.overflow = '';   // Enable scrolling
+      });
+
+      // Close form when clicking on the overlay
+      overlay.addEventListener('click', () => {
+         loginForm.classList.add('hidden'); // Hide the form
+         overlay.classList.add('hidden');    // Hide the overlay
+         document.body.style.overflow = '';   // Enable scrolling
+      });
+   </script>
+
+   <h1 class=" border-slate-50 text-[90px] font-bold underline text-red-200">Hello world!</h1>
+   <h1
+      class="m-10 text-5xl font-extrabold text-white shadow-lg p-6 rounded-lg bg-gradient-to-r from-blue-400 to-purple-500 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:shadow-xl hover:scale-105 hover-effect">
+      Hello World!
+   </h1>
+
+
+
+
+   <div class="border-4 border-blue-600 m-4">
+      This is a div with a blue border of 4px.
+   </div>
+
+
+   <form action="frankiesubmit.html" class="border-2 border-blue-600 m-5 rounded-md shadow-xl p-5">
+
+      <span class="inline-flex flex-col gap-4 max-w-fit mx-auto">
+         <label class="col-span-1 h-[40px]" for="t1">UserName:</label>
+         <label class="col-span-1 h-[40px]" for="t2">Email:</label>
+         <label class="col-span-1 h-[40px]" for="t3">First Name:</label>
+         <label class="col-span-1 h-[40px]" for="t4">Last Name:</label>
+         <label class="col-span-1 h-[40px]" for="t5">Gender:</label>
+
+         <label class="col-span-1 h-[40px]" for="t7">Phone:</label>
+         <label class="col-span-1 h-[40px] block text-lg font-semibold" for="options">Choose an Option:</label>
+
+         <label class="col-span-1 h-[40px]" for="t8">checkboxs:</label>
+      </span>
+
+
+      <span class="inline-flex flex-col gap-4 max-w-fit mx-auto ">
+         <input class="h-[40px] col-span-1 border-4 border-blue-300 w-[300px]" type="text" id="t1" name="vt1">
+         <input class="h-[40px] col-span-1 border-4 border-blue-300 w-[300px]" type="text" id="t2" name="vt2">
+         <input class="h-[40px] col-span-1 border-4 border-blue-300 w-[300px]" type="text" id="t3" name="vt3">
+         <input class="h-[40px] col-span-1 border-4 border-blue-300 w-[300px]" type="text" id="t4" name="vt4">
+
+         <div class="col-span-1 h-[40px]">
+            <input type="radio" name="option" id="option1" class="form-radio text-blue-600" />
+            <label for="option1" class="cursor-pointer">Male</label>
+
+            <input type="radio" name="option" id="option2" class="form-radio text-blue-600" />
+            <label for="option2" class="cursor-pointer">Female</label>
+
+            <input type="radio" name="option" id="option3" class="form-radio text-blue-600" />
+            <label for="option3" class="cursor-pointer">Other</label>
+         </div>
+
+         <input class="col-span-1 h-[40px] border-4 border-blue-300 w-[300px]" type="text" id="t5" name="vt5">
+
+         <select
+            class="col-span-1 h-[40px] block w-full border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500 p-2"
+            id="options" name="options">
+            <option value="" disabled selected>Select an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <option value="option4">Option 4</option>
+         </select>
+
+         <div class="col-span-1 h-[40px]">
+
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label>
+         </div>
+
+      </span>
+
+      <div>
+         <input type="submit">
+
+         <input type="reset">
+
+      </div>
+   </form>
+
+   <em>erwrewrew</em><strong>dfdsfsfsd</strong> dsad
+   <h1> 歡迎來我的網站</h1>
+   <p>這是一個段落</p>
+   <a href="https://example.com" target="_blank">這是一個連結</a>
+   <img src="201381485133593.jpg" alt="12dqqwfwq ">
+   <div class="flex items-center justify-center h-screen"><img src="giphy.gif"></div>
+
+   <!-- <div class="flex items-center justify-center h-screen">
+      <img src="giphy.gif" alt="Description" class="max-w-full h-auto" />
+  </div> -->
+   <article>
+      <h1 id="#frankie">frankie</h1>
+      <br>___________________________________________________________________________
+      <br>My name is frankie
+      <br>hello
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="#frankie" target="_blank">這是frankie</a>
+
+   </article>
+
+
+
+
+
+
+
+</body>
+
+</html>

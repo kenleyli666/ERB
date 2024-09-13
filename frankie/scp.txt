@@ -1,0 +1,49 @@
+scp 1.py root@www.boxyweb.fun:/root/1.py
+scp root@www.boxyweb.fun:/root/1.py  6.py
+
+powershell Compress-Archive C:\Users\L16\Desktop\frankie C:\Users\L16\Desktop\frankie.zip
+
+
+
+
+https://docs.google.com/document/d/1dNHovOz5JR4q4IOeI0iKCG59lIE-QGHH5fzEd_fDOMU/edit?usp=drivesdk
+
+scp C:\Users\L16\Desktop\frankie\前端網站開發人員證書課程.pdf root@www.boxyweb.fun:/root/前端網站開發人員證書課程.pdf
+scp root@www.boxyweb.fun:/root/前端網站開發人員證書課程.pdf C:\Users\L16\Desktop\前端網站開發人員證書課程.pdf
+
+
+powershell Compress-Archive -Path "C:\Users\L16\Desktop\SublimeText\*" -DestinationPath "C:\Users\L16\Desktop\SublimeText.zip"
+scp "C:\Users\L16\Desktop\SublimeText.zip" root@www.boxyweb.fun:/root/SublimeText.zip
+
+
+scp root@www.boxyweb.fun:/root/SublimeText.zip "C:\Users\L16\Desktop\SublimeText.zip" 
+powershell expand-archive "C:\Users\L16\Desktop\SublimeText.zip" C:\Users\L16\Desktop\SublimeText2
+
+
+
+
+
+powershell Compress-Archive -Path "C:\Users\L16\Desktop\frankie\*" -DestinationPath "C:\Users\L16\Desktop\frankie.zip"
+scp C:\Users\L16\Desktop\frankie.zip root@www.boxyweb.fun:/root/frankie.zip
+
+
+
+scp root@www.boxyweb.fun:/root/frankie.zip C:\Users\L16\Desktop\frankie.zip 
+powershell expand-archive C:\Users\L16\Desktop\frankie.zip C:\Users\L16\Desktop\frankie2
+
+
+
+
+
+
+
+
+
+upload
+powershell Compress-Archive -Force -Path "C:\Users\L14\Desktop\frankie\*" -DestinationPath "C:\Users\L14\Desktop\frankie.zip"
+scp C:\Users\L14\Desktop\frankie.zip root@www.boxyweb.fun:/root/frankie.zip
+
+
+
+scp root@www.boxyweb.fun:/root/frankie.zip C:\Users\L14\Desktop\frankie.zip
+powershell expand-archive -Force C:\Users\L14\Desktop\frankie.zip C:\Users\L14\Desktop\frankie2
